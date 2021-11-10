@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30611.23
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "guif", "guif.csproj", "{67900D93-A3F8-412A-B474-D6FD118DD37A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "guif", "guif.csproj", "{67900D93-A3F8-412A-B474-D6FD118DD37A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "guifTests", "..\guifTests\guifTests.csproj", "{33EE4C94-3FAA-43C2-9594-0B4ABD92AF56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{67900D93-A3F8-412A-B474-D6FD118DD37A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67900D93-A3F8-412A-B474-D6FD118DD37A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67900D93-A3F8-412A-B474-D6FD118DD37A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33EE4C94-3FAA-43C2-9594-0B4ABD92AF56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33EE4C94-3FAA-43C2-9594-0B4ABD92AF56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33EE4C94-3FAA-43C2-9594-0B4ABD92AF56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33EE4C94-3FAA-43C2-9594-0B4ABD92AF56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

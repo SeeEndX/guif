@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace guif
@@ -15,15 +8,21 @@ namespace guif
         public Form1()
         {
             InitializeComponent();
+            SumForRub.Text = Properties.Settings.Default.SumForRub;
         }
-        private void func()
+        public string func(int p)
         {
-            int p = int.Parse(this.SumForRub.Text);
             string result = "";
             if (p < 1)
-                MessageBox.Show("Цена не может быть меньше 1 копейки!");
+            {
+                result = "Цена не может быть меньше 1 копейки!";
+                MessageBox.Show(result);
+            }
             else if (p > 9999)
-                MessageBox.Show("Цена слишком высокая, не удовлетворяет условию задачи!");
+            {
+                result = "Цена слишком высокая, не удовлетворяет условию задачи!";
+                MessageBox.Show(result);
+            }
             else
             {
                 if (p % 10 == 0) result = "Товар стоит " + p / 100 + " руб";
@@ -48,14 +47,19 @@ namespace guif
                     MessageBox.Show(result);
                 }
             }
+            return result;
         }
+
         private void Count_Click(object sender, EventArgs e)
         {
-            func();
+            Properties.Settings.Default.SumForRub = this.SumForRub.Text;
+            Properties.Settings.Default.Save();
+            int p = int.Parse(this.SumForRub.Text);
+            func(p);
         }
 
         private void Clear_Click(object sender, EventArgs e)
-        {
+        { 
             this.SumForRub.Text = "";
         }
 
